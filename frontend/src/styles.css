@@ -1,0 +1,21 @@
+:root {
+  color: #0f172a;
+  font-synthesis: none;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background:
+    radial-gradient(78rem 38rem at 18% 88%, rgba(226, 238, 255, 0.52), transparent 70%),
+    radial-gradient(42rem 18rem at 82% 30%, rgba(255, 240, 226, 0.42), transparent 66%),
+    #fbfdff;
+  margin: 0;
+  min-height: 100vh;
+}

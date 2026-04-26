@@ -1,0 +1,28 @@
+---
+description: Product context and booking constraints for AI
+alwaysApply: true
+---
+
+# Project Context
+
+## Назначение
+- Проект: сервис бронирования в стиле cal.com.
+- Регистрация и авторизация отсутствуют.
+
+## Роли
+- `Owner`: один заранее заданный профиль владельца календаря.
+- `Guest`: гость без аккаунта и без входа в систему.
+
+## Домен
+- Использовать единые термины: `Owner`, `EventType`, `Slot`, `Booking`.
+
+## Бизнес-ограничения
+- Окно записи по умолчанию: 14 дней от текущей даты.
+- На один и тот же интервал времени нельзя создать две записи, даже если типы событий различаются.
+- Для публичного бронирования обязательны поля: `guestName`, `guestEmail`, `eventTypeId`, `slotStartAt`.
+
+## API source of truth
+- API-контракт берется из TypeSpec-файлов:
+  - `spec/main.tsp`
+  - `spec/models.tsp`
+  - `spec/routes.tsp`

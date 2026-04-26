@@ -1,0 +1,9 @@
+.git
+.github
+node_modules
+backend/node_modules
+frontend
+spec
+tsp-output
+**/test-results
+**/playwright-report
