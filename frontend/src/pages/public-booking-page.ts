@@ -84,6 +84,7 @@ export class PublicBookingPage extends LitElement {
   }
 
   private handleOpenBookingStep = (): void => {
+    this.selectedEventTypeId = ''
     this.currentStep = 'event-types'
     this.successMessage = ''
   }
@@ -105,11 +106,6 @@ export class PublicBookingPage extends LitElement {
 
       this.owner = owner
       this.eventTypes = eventTypes
-      this.selectedEventTypeId = eventTypes[0]?.id ?? ''
-
-      if (this.selectedEventTypeId) {
-        await this.loadSlots(this.selectedEventTypeId)
-      }
     } catch (error) {
       this.errorMessage = this.getErrorMessage(error)
     } finally {
@@ -164,6 +160,7 @@ export class PublicBookingPage extends LitElement {
   }
 
   private handleLandingCta(): void {
+    this.selectedEventTypeId = ''
     this.currentStep = 'event-types'
     this.successMessage = ''
   }
